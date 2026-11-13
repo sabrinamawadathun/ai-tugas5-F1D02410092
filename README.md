@@ -3,7 +3,6 @@
 ## 1. Identitas
 - Nama: Sabrina Mawadathun Salsabila
 - NIM: F1D02410092
-- Mata kuliah: Kecerdasan Buatan
 
 ## 2. Deskripsi
 Program ini merupakan sistem pakar sederhana untuk mengidentifikasi kemungkinan penyebab gangguan koneksi WiFi pada laptop. Pengguna menjawab pertanyaan mengenai kondisi WiFi, kemudian sistem mencocokkan jawaban dengan aturan IF-THEN dan menampilkan kesimpulan beserta alasan dan sumber aturan.
@@ -89,8 +88,6 @@ Hasil yang diharapkan:
 - Tidak ada aturan yang terpenuhi.
 
 
-Setelah screenshot dibuat, tampilkan di bagian ini:
-
 ### Kasus 1
 ![Hasil pengujian kasus 1](screenshot/kasus1.png)
 
@@ -104,4 +101,4 @@ Setelah screenshot dibuat, tampilkan di bagian ini:
 Pengetahuan pada sistem ini disusun berdasarkan panduan Microsoft Support mengenai pemecahan masalah koneksi WiFi pada Windows dan Google Home and Nest Help mengenai faktor yang memengaruhi kecepatan WiFi. Aturan digunakan untuk memberikan dugaan awal pada gangguan WiFi laptop, terutama yang berkaitan dengan pengaturan WiFi, jarak perangkat dari router, penggunaan bandwidth, dan kemungkinan masalah router atau ISP. Sistem ini tidak memeriksa perangkat atau jaringan secara langsung sehingga hasilnya hanya berupa saran awal, bukan keputusan teknis yang pasti. Pengguna tetap perlu melakukan pemeriksaan lanjutan atau menghubungi penyedia layanan internet jika masalah berlanjut.
 
 ## 10. Penggunaan AI
-AI digunakan sebagai alat bantu untuk menyusun rancangan aturan IF-THEN, struktur file JSON, kode program Python, dan dokumentasi README. Sumber pengetahuan tetap dicantumkan agar dasar setiap aturan dapat diperiksa. Program dan aturan perlu dipahami serta diuji kembali oleh penulis.
+AI digunakan untuk mencari dan memilih sumber, menyusun aturan dan kode, struktur file JSON, dan menulis README. Saya memeriksa aturan terhadap teks sumber dan menjalankan pengujian sendiri
