@@ -1,0 +1,134 @@
+{
+  "judul": "Sistem Pakar Identifikasi Gangguan Koneksi WiFi pada Laptop",
+  "batas": "Basis pengetahuan ini disusun dari panduan pemecahan masalah Microsoft Support untuk Windows dan Google Nest Help untuk faktor yang memengaruhi kecepatan WiFi. Sistem hanya memberikan dugaan awal berdasarkan jawaban pengguna, bukan diagnosis teknis yang pasti. Kondisi router, konfigurasi jaringan, jenis perangkat, dan layanan ISP dapat berbeda-beda.",
+  "sumber": {
+    "S1": {
+      "judul": "Memperbaiki masalah koneksi Wi-Fi di Windows",
+      "penerbit": "Microsoft Support",
+      "url": "https://support.microsoft.com/id-id/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows",
+      "diakses": "13 November 2026"
+    },
+    "S2": {
+      "judul": "Memecahkan masalah internet lambat di Google Nest Wifi atau Google Wifi",
+      "penerbit": "Google Home and Nest Help",
+      "url": "https://support.google.com/googlehome/answer/6246489?hl=id",
+      "diakses": "13 November 2026"
+    }
+  },
+  "pertanyaan": [
+    {
+      "fakta": "mode_pesawat_aktif",
+      "tanya": "Apakah Mode Pesawat pada laptop sedang aktif?"
+    },
+    {
+      "fakta": "wifi_nonaktif",
+      "tanya": "Apakah fitur WiFi pada laptop sedang dimatikan?"
+    },
+    {
+      "fakta": "jaringan_tidak_ditemukan",
+      "tanya": "Apakah nama jaringan WiFi tidak muncul dalam daftar jaringan?"
+    },
+    {
+      "fakta": "jauh_dari_router",
+      "tanya": "Apakah laptop berada jauh dari router atau terhalang banyak dinding?"
+    },
+    {
+      "fakta": "internet_lambat",
+      "tanya": "Apakah koneksi internet terasa lambat?"
+    },
+    {
+      "fakta": "banyak_perangkat",
+      "tanya": "Apakah banyak perangkat sedang menggunakan WiFi yang sama?"
+    },
+    {
+      "fakta": "perangkat_lain_juga_bermasalah",
+      "tanya": "Apakah perangkat lain yang memakai WiFi yang sama juga tidak bisa mengakses internet atau mengalami koneksi lambat?"
+    }
+  ],
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": [
+        "mode_pesawat_aktif"
+      ],
+      "mode": "dan",
+      "maka": "gangguan_mode_pesawat",
+      "sumber": "S1",
+      "alasan": "Mode Pesawat perlu dinonaktifkan agar koneksi nirkabel dapat digunakan."
+    },
+    {
+      "id": "R2",
+      "jika": [
+        "wifi_nonaktif"
+      ],
+      "mode": "dan",
+      "maka": "wifi_laptop_dimatikan",
+      "sumber": "S1",
+      "alasan": "WiFi laptop harus diaktifkan sebelum dapat tersambung ke jaringan."
+    },
+    {
+      "id": "R3",
+      "jika": [
+        "jaringan_tidak_ditemukan",
+        "wifi_nonaktif"
+      ],
+      "mode": "dan",
+      "maka": "periksa_pengaturan_adaptor_wifi",
+      "sumber": "S1",
+      "alasan": "Jika jaringan tidak ditemukan dan WiFi nonaktif, periksa pengaturan atau adaptor WiFi."
+    },
+    {
+      "id": "R4",
+      "jika": [
+        "jauh_dari_router"
+      ],
+      "mode": "dan",
+      "maka": "sinyal_wifi_lemah",
+      "sumber": "S2",
+      "alasan": "Jarak dan penghalang fisik dapat menurunkan kualitas sinyal WiFi."
+    },
+    {
+      "id": "R5",
+      "jika": [
+        "sinyal_wifi_lemah",
+        "internet_lambat"
+      ],
+      "mode": "dan",
+      "maka": "lambat_karena_jarak_sinyal",
+      "sumber": "S2",
+      "alasan": "Sinyal yang lemah dapat menyebabkan kecepatan koneksi menurun."
+    },
+    {
+      "id": "R6",
+      "jika": [
+        "banyak_perangkat",
+        "internet_lambat"
+      ],
+      "mode": "dan",
+      "maka": "kemungkinan_kemacetan_bandwidth",
+      "sumber": "S2",
+      "alasan": "Banyak perangkat yang menggunakan bandwidth secara bersamaan dapat memperlambat internet."
+    },
+    {
+      "id": "R7",
+      "jika": [
+        "perangkat_lain_juga_bermasalah"
+      ],
+      "mode": "dan",
+      "maka": "kemungkinan_masalah_router_atau_isp",
+      "sumber": "S1",
+      "alasan": "Jika beberapa perangkat mengalami masalah pada jaringan yang sama, sumber masalah mungkin berada pada router atau layanan internet."
+    },
+    {
+      "id": "R8",
+      "jika": [
+        "kemungkinan_masalah_router_atau_isp",
+        "internet_lambat"
+      ],
+      "mode": "dan",
+      "maka": "periksa_router_dan_hubungi_isp",
+      "sumber": "S2",
+      "alasan": "Jika masalah terjadi pada beberapa perangkat dan internet lambat, periksa jaringan/router dan hubungi ISP bila berlanjut."
+    }
+  ]
+}
